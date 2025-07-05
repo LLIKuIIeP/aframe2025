@@ -98,7 +98,7 @@ const Header = ({ isMenuOpen, toggleMenu, scrollToSection }) => {
 // Hero Section Component
 const Hero = ({ scrollToSection }) => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden hero-parallax">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -110,16 +110,16 @@ const Hero = ({ scrollToSection }) => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+      <div className="relative z-10 text-center text-white px-4 fade-in">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight heading-responsive">
           Глэмпинг А-фрейм Березки
         </h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90">
+        <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90 text-responsive">
           Панорамные домики в лесу в 75 км от Москвы
         </p>
         <button 
           onClick={() => scrollToSection('booking')}
-          className="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-all duration-300 transform hover:scale-105"
+          className="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-all duration-300 transform hover:scale-105 btn-animate btn-pulse"
         >
           Забронировать дом
         </button>
