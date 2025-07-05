@@ -164,27 +164,27 @@ const AboutSection = () => {
     <section id="about" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <div className="text-center mb-16 fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 heading-responsive text-gradient">
               О нашей компании
             </h2>
             <div className="max-w-3xl mx-auto">
-              <p className="text-lg text-gray-600 mb-4">
+              <p className="text-lg text-gray-600 mb-4 text-responsive">
                 Аренда панорамных домиков в лесу в 75 км от Москвы, Ступинский район
               </p>
-              <p className="text-lg text-gray-600 mb-4">
+              <p className="text-lg text-gray-600 mb-4 text-responsive">
                 Комфортный отдых на природе со всеми удобствами
               </p>
-              <p className="text-lg text-gray-600 mb-4">
+              <p className="text-lg text-gray-600 mb-4 text-responsive">
                 Красивые локации для ваших фотографий
               </p>
-              <p className="text-lg text-gray-600 mb-4">
+              <p className="text-lg text-gray-600 mb-4 text-responsive">
                 Конные прогулки
               </p>
-              <p className="text-lg text-gray-600 mb-4">
+              <p className="text-lg text-gray-600 mb-4 text-responsive">
                 Возможно бронирование на одну ночь
               </p>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 text-responsive">
                 Банный чан для СПА-процедур около каждого домика
               </p>
             </div>
@@ -192,11 +192,13 @@ const AboutSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${feature.image})` }}></div>
+              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 hover-lift card-hover">
+                <div className="h-48 bg-cover bg-center relative overflow-hidden" style={{ backgroundImage: `url(${feature.image})` }}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <p className="text-gray-600 text-responsive">{feature.description}</p>
                 </div>
               </div>
             ))}
